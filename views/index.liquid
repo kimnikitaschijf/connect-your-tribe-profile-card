@@ -1,14 +1,41 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+  <div class="flip-card-3D-wrapper">
+    <div id="flip-card">
+      <div class="flip-card-front">
+        <section>
+          <h1>{{ person.name }}</h1>
+          <figure>
+            <div class="foto">
+              <img src="assets/IMG_4476 2.JPG" alt="Kim Nikita Schijf" class="image">
+              <p>Frontend Designer And Developer</p>
+          </figure>
+        </section>
+        <button id="flip-card-btn-turn-to-back"><img src="assets/refresh.png" alt="Flip"></button>
+      </div>
 
-  <p>{{ person.name }}</p>
-
-  <footer></footer>
-</article>
+      <div class="flip-card-back">
+        <h2>Over mij:</h2>
+        <ul id="buttons">
+          <div>
+            <li><a href="#">Privé</a></li>
+            <li><a href="#">Hobby's</a></li>
+            <li><a href="#">Studie</a></li>
+            <li><a href="#">Werk</a></li>
+          </div>
+        </ul>
+        <h3>Contact:</h3>
+        <footer class="footer">
+          <div class="contact-info">
+              <p><img src="assets/email.png" alt="Email Icon"> kimnikitaschijfhva@icloud.com</p>
+              <p><img src="assets/phone-call.png" alt="Phone Icon"> +31 6 41828215</p>
+              <p><img src="assets/location.png" alt="Location Icon"> Heerhugowaard</p>
+          </div>
+      </footer>
+        <button id="flip-card-btn-turn-to-front"><img src="assets/refresh.png" alt="Flip"></button>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}
