@@ -18,17 +18,28 @@ body {
 }
 
 /* formaat kaartje */
-.flip-card-3D-wrapper {
+#card-layout {
   width: 60%;
   height: 80%;
   max-width: 300px;
   max-height: 500px;
   position: relative;
-  -o-perspective: 900px;
-  -webkit-perspective: 900px;
-  -ms-perspective: 900px;
   perspective: 900px;
   margin: 0 auto;
+
+  .front,
+  .back {
+    position: absolute;
+    inset: 0;
+  }
+
+  .front {
+    background-color: red;
+  }
+
+  .back {
+    background-color: pink;
+  }
 }
 
 /* kaartje plaatsing + flip */
@@ -38,21 +49,12 @@ body {
   text-align: center;
   margin: 50px auto;
   position: absolute;
-  -o-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  -o-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 /* animatie flip */
 .do-flip {
-  -o-transform: rotateY(-180deg);
-  -webkit-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 
@@ -79,13 +81,8 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  -o-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
-  -webkit-box-shadow: 5px 6px 32px 2px rgba(133, 133, 133, 0.71);
-  -moz-box-shadow: 5px 6px 32px 2px rgba(133, 133, 133, 0.71);
   box-shadow: 5px 6px 32px 2px rgba(133, 133, 133, 0.71);
 }
 
@@ -97,9 +94,6 @@ body {
 /* kleur achterkant kaartje + losse apparte pagina*/
 #flip-card .flip-card-back {
   background: #F9F7F4;
-  -o-transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -166,8 +160,8 @@ img {
 }
 
 /* plaatje voorkant */
-.foto img {
-  width: 70%;
+.image {
+  width: 50%;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;

@@ -1,41 +1,53 @@
 {% render 'partials/head.liquid' %}
 
-  <div class="flip-card-3D-wrapper">
-    <div id="flip-card">
-      <div class="flip-card-front">
-        <section>
-          <h1>{{ person.name }}</h1>
-          <figure>
-            <div class="foto">
-              <img src="assets/IMG_4476 2.JPG" alt="Kim Nikita Schijf" class="image">
-              <p>Frontend Designer And Developer</p>
-          </figure>
-        </section>
-        <button id="flip-card-btn-turn-to-back"><img src="assets/refresh.png" alt="Flip"></button>
+{% comment %} voorkant {% endcomment %}
+<section id="card-layout">
+  <div class="card-inner">
+
+    <article id="front">
+      <h1>{{ person.name }}</h1>
+      <img src="assets/IMG_44762.JPG" alt="me" class="main-photo">
+      <p>Frontend Designer And Developer</p>
+      <button id="flip-card-btn-turn-to-back"><img src="assets/refresh.png" alt="Flip"></button>
+    </article>
+
+    {% comment %} achterkant {% endcomment %}
+    <article id="back">
+      <h2>Over mij:</h2>
+      <div class="info-buttons">
+        <details>
+          <summary>Privé</summary>
+
+          <p> {{person.custom.loves}}</p>
+        
+        
+          </details>
+        <details>
+          <summary>Hobby's</summary>
+          <p>tekst</p>
+        </details>
+        <details>
+          <summary>Studie</summary>
+          <p>tekst</p>
+        </details>
+        <details>
+          <summary>Werk</summary>
+          <p>tekst</p>
+        </details>
       </div>
 
-      <div class="flip-card-back">
-        <h2>Over mij:</h2>
-        <ul id="buttons">
-          <div>
-            <li><a href="#">Privé</a></li>
-            <li><a href="#">Hobby's</a></li>
-            <li><a href="#">Studie</a></li>
-            <li><a href="#">Werk</a></li>
-          </div>
-        </ul>
-        <h3>Contact:</h3>
-        <footer class="footer">
-          <div class="contact-info">
-              <p><img src="assets/email.png" alt="Email Icon"> kimnikitaschijfhva@icloud.com</p>
-              <p><img src="assets/phone-call.png" alt="Phone Icon"> +31 6 41828215</p>
-              <p><img src="assets/location.png" alt="Location Icon"> Heerhugowaard</p>
-          </div>
+      <h3>Contact:</h3>
+      <footer>
+        <p class="email-icon">kimnikitaschijfhva@icloud.com</p>
+        <p class="phone-icon">+31 6 41828215</p>
+        <p class="location-icon">Heerhugowaard</p>
       </footer>
-        <button id="flip-card-btn-turn-to-front"><img src="assets/refresh.png" alt="Flip"></button>
-      </div>
-    </div>
+      <button id="flip-card-btn-turn-to-front"><img src="assets/refresh.png" alt="Flip"></button>
+    </article>
+
   </div>
-  <script src="scripts/script.js"></script>
+</section>
+
+<script src="scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}
