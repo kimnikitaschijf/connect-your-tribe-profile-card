@@ -1,7 +1,7 @@
 {% render 'partials/head.liquid' %}
 
 {% comment %} voorkant {% endcomment %}
- 
+
 {% comment %} <details>
   <summary>Data</summary>
   <pre>{{ person | json:4 }}</pre>
@@ -12,9 +12,9 @@
 
     <article id="front">
       <h1>{{ person.name }}</h1>
-      <img src="assets/IMG_44762.JPG" alt="me" class="main-photo">
       <p>Frontend Designer And Developer</p>
-      <button id="flip-card-btn-turn-to-back"><img src="assets/refresh.png" alt="Flip"></button>
+      <img src="assets/IMG_44762.JPG" alt="me" class="main-photo">
+      <button id="flip-card-btn-turn-to-back"><img src="assets/turn.png" alt="Flip"></button>
     </article>
 
     {% comment %} achterkant {% endcomment %}
@@ -44,7 +44,7 @@
         <p class="phone-icon">+31 6 41828215</p>
         <p class="location-icon">Heerhugowaard</p>
       </footer>
-      <button id="flip-card-btn-turn-to-front"><img src="assets/refresh.png" alt="Flip"></button>
+      <button id="flip-card-btn-turn-to-front"><img src="assets/turn.png" alt="Flip"></button>
     </article>
 
   </div>
