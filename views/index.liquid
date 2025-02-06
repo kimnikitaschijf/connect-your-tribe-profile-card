@@ -1,6 +1,12 @@
 {% render 'partials/head.liquid' %}
 
 {% comment %} voorkant {% endcomment %}
+ 
+{% comment %} <details>
+  <summary>Data</summary>
+  <pre>{{ person | json:4 }}</pre>
+</details> {% endcomment %}
+
 <section id="card-layout">
   <div class="card-inner">
 
@@ -17,22 +23,18 @@
       <div class="info-buttons">
         <details>
           <summary>Privé</summary>
-
-          <p> {{person.custom.loves}}</p>
-        
-        
-          </details>
+          <p class="info-text"> 🏠 {{person.custom.location}}</p>
+          <p class="info-text"> 🎤 {{person.custom.favoriteartists}}</p>
+          <p class="info-text"> 💪 {{person.custom.skill}}</p>
+          <p class="info-text"> 🎨 {{person.custom.favoritecolor}}</p>
+        </details>
         <details>
           <summary>Hobby's</summary>
-          <p>tekst</p>
+          <p class="info-text"> 📖 {{person.custom.hobbys}}</p>
         </details>
         <details>
           <summary>Studie</summary>
-          <p>tekst</p>
-        </details>
-        <details>
-          <summary>Werk</summary>
-          <p>tekst</p>
+          <p class="info-text"> 🏫 {{person.custom.studie}}</p>
         </details>
       </div>
 
