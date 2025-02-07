@@ -11,7 +11,7 @@ body {
 /* formaat kaartje */
 #card-layout {
     width: 20rem;
-    height: 35rem;
+    height: 37rem;
     position: relative;
     justify-self: center;
     perspective: 900px;
@@ -73,14 +73,6 @@ h2 {
     font-weight: 400;
 }
 
-h3 {
-    color: #344C3E;
-    font-size: 20px;
-    text-align: center;
-    font-family: "Pinyon Script", cursive;
-    font-weight: 400;
-    margin-top: 120px;
-}
 
 p {
     color: #829671;
@@ -124,57 +116,10 @@ summary {
 .info-buttons [open] {
     justify-self: center;
     list-style: none;
-    background-color: #D8959C;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #b1c89d;
+    border-radius: 10px 10px 0px 0px;
     text-align: center;
     width: 250px;
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.email-icon,
-.phone-icon,
-.location-icon {
-    display: flex;
-    gap: 0.7em;
-    margin: 10px;
-}
-
-.email-icon::before {
-    content: "";
-    background-image: url("../assets/email.png");
-    position: relative;
-    height: 1em;
-    width: 1em;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.phone-icon::before {
-    content: "";
-    background-image: url("../assets/phone-call.png");
-    position: relative;
-    height: 1em;
-    width: 1em;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.location-icon::before {
-    content: "";
-    background-image: url("../assets/location.png");
-    position: relative;
-    height: 1em;
-    width: 1em;
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 /* flip button */
@@ -192,9 +137,4 @@ footer {
     border: none;
     border-radius: 14px;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-img {
-    width: 20px;
-    height: auto;
 }
