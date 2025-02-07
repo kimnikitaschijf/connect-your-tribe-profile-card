@@ -1,17 +1,22 @@
 /* kaartje omlijning */
 html,
 body {
-    height: auto;
+    height: 100%;
     width: 100%;
     margin: 2rem auto;
     padding: 0;
     font-family: "SUSE", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* formaat kaartje */
 #card-layout {
-    width: 20rem;
-    height: 37rem;
+    width: 85%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 600px;
     position: relative;
     justify-self: center;
     perspective: 900px;
