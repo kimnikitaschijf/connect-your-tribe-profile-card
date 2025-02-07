@@ -10,7 +10,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-
 /* formaat kaartje */
 #card-layout {
     width: 85%;
@@ -57,7 +56,7 @@ body {
         display: flex;
         justify-self: center;
         border-radius: 15px;
-        box-shadow: 1px 10px 10px #344c3eab   
+        box-shadow: 1px 10px 10px #344c3eab
     }
 }
 
@@ -77,7 +76,6 @@ h2 {
     font-family: "Pinyon Script", cursive;
     font-weight: 400;
 }
-
 
 p {
     color: #829671;
