@@ -17,6 +17,7 @@ body {
     max-width: 350px;
     max-height: 600px;
     position: relative;
+    margin: auto;
     justify-self: center;
     perspective: 900px;
 
@@ -54,7 +55,7 @@ body {
         width: 60%;
         height: auto;
         display: flex;
-        justify-self: center;
+        margin: auto;
         border-radius: 15px;
         box-shadow: 1px 10px 10px #344c3eab
     }
