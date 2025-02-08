@@ -1,222 +1,143 @@
-
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* kaartje omlijning */
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 20px;
-  font-weight: 300;
-  overflow: hidden;
-  font-family: "SUSE", sans-serif;
-  font-style: normal;
-  text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0;
+    font-family: "SUSE", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    margin-top: 5rem;
+    color: #344C3E;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+}
+
+h2 {
+    color: #344C3E;
+    font-size: 35px;
+    text-align: center;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+}
+
+p {
+    color: #829671;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 25px;
 }
 
 /* formaat kaartje */
 #card-layout {
-  width: 60%;
-  height: 80%;
-  max-width: 300px;
-  max-height: 500px;
-  position: relative;
-  perspective: 900px;
-  margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    max-width: 350px;
+    max-height: 600px;
+    position: relative;
+    margin: auto;
+    perspective: 900px;
 
-  .front,
-  .back {
-    position: absolute;
-    inset: 0;
-  }
+    .card-inner {
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        transition: transform 0.45s ease;
+        width: 100%;
+        height: 100%;
+        box-shadow: 1px 2px 3px rgba(0.2, 0.2, 0.2, 0.2);
 
-  .front {
-    background-color: red;
-  }
+        &.do-flip {
+            transform: rotateY(-180deg);
+        }
+    }
 
-  .back {
-    background-color: pink;
-  }
+    #front,
+    #back {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+    }
+
+    #front {
+        background: #F4F3F1;
+    }
+
+    #back {
+        background: #F4F3F1;
+        transform: rotateY(180deg);
+    }
+
+    .main-photo {
+        width: 60%;
+        height: auto;
+        display: flex;
+        margin: auto;
+        border-radius: 15px;
+        box-shadow: 1px 10px 10px #344c3eab
+    }
 }
 
-/* kaartje plaatsing + flip */
-#flip-card {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin: 50px auto;
-  position: absolute;
-  transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
+summary {
+    color: #0F402B;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 25px;
 }
 
-/* animatie flip */
-.do-flip {
-  transform: rotateY(-180deg);
+.info-text {
+    color: #0F402B;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 25px;
+}
+
+.info-buttons {
+    margin: auto;
+    list-style: none;
+    background-color: #829671;
+    line-height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    font-weight: 100;
+}
+
+.info-buttons [open] {
+    margin: auto;
+    list-style: none;
+    background-color: #b1c89d;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    width: 250px;
 }
 
 /* flip button */
 #flip-card-btn-turn-to-back,
 #flip-card-btn-turn-to-front {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 40px;
-  height: 40px;
-  background: #B8A593;
-  cursor: pointer;
-  visibility: hidden;
-  padding: 0;
-  border: none;
-  border-radius: 14px;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* voor en achterkant achter elkaar */
-#flip-card .flip-card-front,
-#flip-card .flip-card-back {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: hidden;
-  z-index: 2;
-  box-shadow: 5px 6px 32px 2px rgba(133, 133, 133, 0.71);
-}
-
-/* kleur voorkant kaartje */
-#flip-card .flip-card-front {
-  background: #F9F7F4;
-}
-
-/* kleur achterkant kaartje + losse apparte pagina*/
-#flip-card .flip-card-back {
-  background: #F9F7F4;
-  transform: rotateY(180deg);
-}
-
-/* Kim nikita schijf */
-h1 {
-  margin: 3rem 0 1rem;
-  color: #2F2621;
-  font-size: 35px;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* over mij */
-h2 {
-  margin: 3rem 0 1rem;
-  color: #2F2621;
-  font-size: 35px;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* keuzemenu layout */
-#buttons li {
-  float: center;
-  list-style: none;
-  background-color: #B8A593;
-  line-height: 45px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  display:block;
-  text-align:center;
-  width:150px; /* fixed width */
-  text-decoration:none; 
-}
-
-/* tekst in keuzemenu */
-ul {
-  float: center;
-  list-style: none;
-}
-
-/* linkjes in keuze menu */
-#buttons li a {
-  text-decoration: none;
-  color: #EFECE5;
-  display: circle;
-}
-
-/* kleuren en layout hover van keuzemenu */
-#buttons li a:hover {
-  color: #2F2621;
-}
-
-/* plaatje flipbutton */
-img {
-  position: relative;
-  width: 2em;
-  transition: .25s .15s;
-}
-
-/* plaatje voorkant */
-.image {
-  width: 50%;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-/* tekst voorkant onder plaatje */
-p {
-  margin: 1rem 0 1rem;
-  color: #B8A593;
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  font-weight: lighter;
-  font-style: normal;
-  text-align: center;
-}
-
-/* footer layout */
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* contact */
-h3 {
-  color: #2F2621;
-  font-size: 30px;
-  text-align: center;
-  font-family: "Pinyon Script", cursive;
-  font-weight: 200;
-  font-style: normal;
-}
-
-/* tekst onder contact layout */
-.contact-info {
-  text-align: center;
-}
-
-/* tekst onder contact  */
-.contact-info p {
-  font-size: 12px;
-  color: #a89b92;
-  margin: 0.5em 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 0%;
-  position: relative; 
-  top: -30px;
-}
-
-/* contact info icons */
-.contact-info img {
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background: #0F402B;
+    cursor: pointer;
+    visibility: hidden;
+    padding: 0;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
