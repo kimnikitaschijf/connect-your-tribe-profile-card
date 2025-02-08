@@ -5,7 +5,7 @@
 {% comment %} <details>
   <summary>Data</summary>
   <pre>{{ person | json:4 }}</pre>
-</details> {% endcomment %}
+</details>  {% endcomment %}
 
 <section id="card-layout">
   <div class="card-inner">
@@ -24,22 +24,22 @@
         <details name="info-details">
           <summary>Privé</summary>
           <p class="info-text"> 🎂 {{ person.birthdate | date: '%A, %e, %B, %Y' }}</p>
-          <p class="info-text"> 💪 {{person.custom.skill}}</p>
-          <p class="info-text"> 🎤 {{person.custom.favoriteartists}}</p>
+          <p class="info-text"> 💪 {{ person.custom.skill }}</p>
+          <p class="info-text"> 🎤 {{ person.custom.favoriteartists }}</p>
         </details>
         <details name="info-details">
           <summary>Hobby's</summary>
-          <p class="info-text"> 📖 {{person.custom.hobbys}}</p>
+          <p class="info-text"> 📖 {{ person.custom.hobbys }}</p>
         </details>
         <details name="info-details">
           <summary>Studie</summary>
-          <p class="info-text"> 🏫 {{person.custom.studie}}</p>
+          <p class="info-text"> 🏫 {{ person.custom.studie }}</p>
         </details>
         <details name="info-details">
           <summary>Contact</summary>
-          <p class="info-text"> 📧 {{person.custom.email}}</p>
-          <p class="info-text"> 📱 {{person.custom.phone}}</p>
-          <p class="info-text"> 🏠 {{person.custom.location}}</p>
+          <p class="info-text"> 📧 {{ person.custom.email }}</p>
+          <p class="info-text"> 📱 {{ person.custom.phone }}</p>
+          <p class="info-text"> 🏠 {{ person.custom.location }}</p>
         </details>
       </div>
       <button id="flip-card-btn-turn-to-front"><img src="assets/turn.png" alt="Flip"></button>
