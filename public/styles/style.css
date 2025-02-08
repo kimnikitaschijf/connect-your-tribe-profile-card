@@ -17,7 +17,7 @@ body {
         font-family: "Pinyon Script", cursive;
         font-weight: 400;
     }
-    
+
     h2 {
         color: #344C3E;
         font-size: 35px;
@@ -25,15 +25,15 @@ body {
         font-family: "Pinyon Script", cursive;
         font-weight: 400;
     }
-}
 
-p {
-    color: #829671;
-    font-size: 1rem;
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-weight: 100;
-    margin-top: 25px;
+    p {
+        color: #829671;
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-weight: 100;
+        margin-top: 25px;
+    }
 }
 
 /* formaat kaartje */
